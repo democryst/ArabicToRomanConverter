@@ -1,17 +1,12 @@
 function roman(arabic) {
     var result = "I";
-    if (arabic === 5) {
-        result = "V";
-    }
-    if (arabic === 10) {
-        result = "X";
-    }
-    if (arabic === 50) {
-        result = "L";
-    }
-    if (arabic === 100) {
-        result = "C";
-    }
+    var arabics= [1,5,10,50,100]
+    var romans= ["I","V","X","L","C"]
+    arabics.forEach(function(item,index){
+        if(arabic === item)
+            result = romans[index];
+
+    })
     return result;
 }
 
