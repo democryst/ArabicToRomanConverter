@@ -1,7 +1,7 @@
 function roman(arabic) {
     var result = "I";
-    var arabics= [1,5,10,50,100]
-    var romans= ["I","V","X","L","C"]
+    var arabics= [1,2,5,10,50,100]
+    var romans= ["I","II","V","X","L","C"]
     arabics.forEach(function(item,index){
         if(arabic === item)
             result = romans[index];

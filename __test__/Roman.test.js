@@ -4,6 +4,11 @@ test("given 1 should return I", function(){
     expect(result).toBe("I");
 })
 
+test("given 2 should return II", function(){
+    let result = roman(2);
+    expect(result).toBe("II");
+})
+
 test("given 5 should return V", function(){
     let result = roman(5);
     expect(result).toBe("V");
