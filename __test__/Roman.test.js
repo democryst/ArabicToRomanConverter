@@ -4,7 +4,7 @@ test("given 1 should return I", function(){
     expect(result).toBe("I");
 })
 
-xtest("given 2 should return II", function(){
+test("given 2 should return II", function(){
     let result = roman(2);
     expect(result).toBe("II");
 })

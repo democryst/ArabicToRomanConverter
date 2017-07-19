@@ -1,14 +1,28 @@
 function roman(arabic) {
-    var result = "I";
-    // var arabics= [1,2,5,10,50,100]
-    var arabics= [1,4,5,9,10,40,50,90,100]
-    // var romans= ["I","II","V","X","L","C"]
-    var romans= ["I","IV","V","IX","X","XL","L","XC","C"]
-    
-    arabics.forEach(function(item,index){
-        if(arabic === item)
-            result = romans[index];
-    })
+    var arabics = [1, 4, 5, 9, 10, 40, 50, 90, 100]
+    var result = "";
+    var map = {
+        1: "I",
+        4: "IV",
+        5: "V",
+        9: "IX",
+        10: "X",
+        40: "XL",
+        50: "L",
+        90: "XC",
+        100: "C"
+    }
+    var size = arabics.length;
+    while (arabic > 0) {
+        for (let i = size - 1; i >= 0; i--) {
+            if (arabic - arabics[i] >= 0) {
+                arabic -= arabics[i];
+                result += map[arabics[i]];
+                
+            }
+        }
+    }
+
     return result;
 }
 
