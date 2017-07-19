@@ -18,7 +18,7 @@ function roman(arabic) {
             if (arabic - arabics[i] >= 0) {
                 arabic -= arabics[i];
                 result += map[arabics[i]];
-                
+                break;
             }
         }
     }

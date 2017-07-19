@@ -1,51 +1,32 @@
 const roman = require("../src/Roman.js");
-test("given 1 should return I", function(){
-    let result = roman(1);
-    expect(result).toBe("I");
-})
 
-test("given 2 should return II", function(){
-    let result = roman(2);
-    expect(result).toBe("II");
-})
-
-test("given 4 should return IV", function(){
-    let result = roman(4);
-    expect(result).toBe("IV");
-})
-
-test("given 5 should return V", function(){
-    let result = roman(5);
-    expect(result).toBe("V");
-})
-
-test("given 9 should return IX", function(){
-    let result = roman(9);
-    expect(result).toBe("IX");
-})
-
-test("given 10 should return X",()=>{
-    let result = roman(10)
-    expect(result).toBe("X")
-})
-
-test("given 40 should return XL",()=>{
-    let result = roman(40)
-    expect(result).toBe("XL")
-})
-
-test("given 50 should return L",()=>{
-    let result = roman(50)
-    expect(result).toBe("L")
-})
-
-test("given 90 should return XC",()=>{
-    let result = roman(90)
-    expect(result).toBe("XC")
-})
-
-test("given 100 should return C",()=>{
-    let result = roman(100)
-    expect(result).toBe("C")
+let testcases = [
+    {given: 1, exp: "I"},
+    {given: 2, exp: "II"},
+    {given: 3, exp: "III"},
+    {given: 4, exp: "IV"},
+    {given: 5, exp: "V"},
+    {given: 6, exp: "VI"},
+    {given: 7, exp: "VII"},
+    {given: 8, exp: "VIII"},
+    {given: 9, exp: "IX"},
+    {given: 10, exp: "X"},
+    {given: 11, exp: "XI"},
+    {given: 12, exp: "XII"},
+    {given: 14, exp: "XIV"},
+    {given: 15, exp: "XV"},
+    {given: 20, exp: "XX"},
+    {given: 40, exp: "XL"},
+    {given: 50, exp: "L"},
+    {given: 60, exp: "LX"},
+    {given: 90, exp: "XC"},
+    {given: 91, exp: "XCI"},
+    {given: 100, exp: "C"},
+];
+testcases.forEach((testcase)=>{
+    test("given "+testcase.given+" should return "+testcase.exp,()=>{
+     let result = roman(testcase.given)
+     expect(result).toBe(testcase.exp)
+    })
 })
 
