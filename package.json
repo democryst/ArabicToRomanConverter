@@ -1,0 +1,17 @@
+{
+  "name": "fb101",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "jest": "^20.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest",
+    "watch:test": "jest --watch",
+    "coverage:test": "jest --coverage"
+  },
+  "author": "",
+  "license": "ISC"
+}
