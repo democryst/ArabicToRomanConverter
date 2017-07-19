@@ -1,15 +1,18 @@
 function roman(arabic) {
-    
+    var result = "I";
     if (arabic === 5) {
-        return "V";
+        result = "V";
     }
     if (arabic === 10) {
-        return "X";
+        result = "X";
     }
     if (arabic === 50) {
-        return "L";
+        result = "L";
     }
-    return "I";
+    if (arabic === 100) {
+        result = "C";
+    }
+    return result;
 }
 
 module.exports = roman;

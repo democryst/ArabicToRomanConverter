@@ -18,3 +18,8 @@ test("given 50 should return L",()=>{
     let result = roman(50)
     expect(result).toBe("L")
 })
+
+test("given 100 should return C",()=>{
+    let result = roman(100)
+    expect(result).toBe("C")
+})
