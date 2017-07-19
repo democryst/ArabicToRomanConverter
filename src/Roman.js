@@ -15,7 +15,7 @@ function roman(arabic) {
     var size = arabics.length;
     while (arabic > 0) {
         for (let i = size - 1; i >= 0; i--) {
-            if (arabic - arabics[i] >= 0) {
+            if (arabic >= arabics[i]) {
                 arabic -= arabics[i];
                 result += map[arabics[i]];
                 break;
